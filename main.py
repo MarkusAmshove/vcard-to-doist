@@ -51,7 +51,7 @@ def sync_tasks(apikey, projectname, contacts):
 
     actions_done = 0
     for contact in contacts:
-        if actions_done >= 20:
+        if actions_done >= 60:
             api.commit()
             actions_done = 0
 
