@@ -59,7 +59,7 @@ def sync_tasks(apikey, projectname, contacts):
         item_id = find_item(api, project_id, contact.name)
 
         if item_id is None:
-            api.items.add(f"{contact.name} gratulieren", project_id=project_id, due=due_date)
+            api.items.add(f"{contact.name} gratulieren", project_id=project_id, due=due_date, priority=4)
         else:
             item = api.items.get_by_id(item_id)
             item.update(due=due_date)
